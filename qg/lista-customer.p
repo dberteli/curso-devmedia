@@ -1,9 +1,14 @@
+/* melhora na identacao */
 DEFINE INPUT PARAMETER p-state AS CHAR NO-UNDO.
 
 FOR EACH customer WHERE
         customer.state = p-state:
 
     DISPLAY 
-        customer.state Customer.City Customer.Country Customer.Name Customer.Credit-Limit
+        Customer.Name 
+        Customer.Cust-Num
+        customer.state 
+        Customer.City 
+        Customer.Country     
         WITH SCROLLABLE.
 END.
